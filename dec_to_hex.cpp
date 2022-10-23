@@ -4,7 +4,7 @@
 void hex(int h);
 
 int main() {
-	int d, r;
+	int d;
 	setlocale(LC_ALL, "Portuguese");
 	printf("Digite um valor inteiro e em decimal: ");
 	scanf("%i", &d);
