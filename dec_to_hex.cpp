@@ -15,21 +15,21 @@ int main() {
 void hex(int h){
 	int q;
 	while(h >= 1){
-		q = h;
+		//q = h;
 		q = h % 16;
 		h = h / 16;	
 		if(q == 10){
-			printf("A");
-		} else if(q == 11){
-			printf("B");
-		} else if(q == 12){
-			printf("C");
-		} else if(q == 13){
-			printf("D");
-		} else if(q == 14){
-			printf("E");
-		} else if(q == 15){
 			printf("F");
+		} else if(q == 11){
+			printf("E");
+		} else if(q == 12){
+			printf("D");
+		} else if(q == 13){
+			printf("C");
+		} else if(q == 14){
+			printf("B");
+		} else if(q == 15){
+			printf("A");
 		} else {
 			printf("%i", q);
 		}
