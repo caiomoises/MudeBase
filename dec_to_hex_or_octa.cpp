@@ -16,15 +16,13 @@ int main() {
 			printf("%i(dec) = ", d);
 			hex(d);
 			printf("(hex).");
-            octal(d);
-            printf("(octa).");
 			break;
         case 2:
             printf("Digite um valor inteiro e em decimal: ");
 			scanf("%i", &d);
 			printf("%i(dec) = ", d);
-            octal(d);
-            printf("(octal).");
+            		octal(d);
+           		 printf("(octal).");
 			break;
 		default:
 			break;
