@@ -2,11 +2,12 @@
 #include<locale.h>
 
 void hex(int h);
+void octal(int e);
 
 int main() {
 	int d, op;
 	setlocale(LC_ALL, "Portuguese");
-	printf("Para qual base você deseja converter?\n1.Decimal para hexadecimal.\n\n");
+	printf("Para qual base você deseja converter?\n1.Decimal para hexadecimal.\n2.Decimal para octadecimal.\n\n");
 	scanf("%i", &op);
 	switch(op){
 		case 1:
@@ -15,6 +16,15 @@ int main() {
 			printf("%i(dec) = ", d);
 			hex(d);
 			printf("(hex).");
+            octal(d);
+            printf("(octa).");
+			break;
+        case 2:
+            printf("Digite um valor inteiro e em decimal: ");
+			scanf("%i", &d);
+			printf("%i(dec) = ", d);
+            octal(d);
+            printf("(octal).");
 			break;
 		default:
 			break;
@@ -46,4 +56,16 @@ void hex(int h){
 			printf("%i", resto[i]);
 		}
 	}
+}
+
+void octal(int e){
+	    int l = 0, resto[l];
+		while(e >= 1){
+			resto[l] = e % 8;
+			e = e / 8;
+			l++;
+	    }
+	    for(int i = l - 1; i >= 0; i--){
+		printf("%i", resto[i]);
+	    }
 }
