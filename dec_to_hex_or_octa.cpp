@@ -2,24 +2,19 @@
 #include<locale.h>
 
 void hex(int h);
-void oct(int o);
 
 int main() {
 	int d, op;
 	setlocale(LC_ALL, "Portuguese");
-	printf("Digite para que base você deseja converter: ");
-	printf("\n1. Decimal para hexadecimal. \n2. Decimal para octodecimal.\n");
+	printf("Para qual base você deseja converter?\n1.Decimal para hexadecimal.\n\n");
 	scanf("%i", &op);
 	switch(op){
 		case 1:
-			printf("\nDigite um valor inteiro e em decimal: ");
+			printf("Digite um valor inteiro e em decimal: ");
 			scanf("%i", &d);
+			printf("%i(dec) = ", d);
 			hex(d);
-			break;
-		case 2:
-			printf("\nDigite um valor inteiro e em decimal: ");
-			scanf("%i", &d);
-			oct(d);
+			printf("(hex).");
 			break;
 		default:
 			break;
@@ -28,8 +23,27 @@ int main() {
 }
 
 void hex(int h){
-	printf("\n%i(dec) = %X(hex).", h, h);
-}
-void oct(int o){
-	printf("\n%i(dec) = %o(octal).", o, o);
+	int q, r = 0, resto[r];
+	while(h >= 1){
+		resto[r] = h % 16;
+		h = h / 16;
+		r++;
+	}
+	for(int i = (r - 1); i >= 0; i--){
+		if(resto[i] == 10){
+			printf("A");
+		} else if(resto[i] == 11){
+			printf("B");
+		} else if(resto[i] == 12){
+			printf("C");
+		} else if(resto[i] == 13){
+			printf("D");
+		} else if(resto[i] == 14){
+			printf("E");
+		} else if(resto[i] == 15){
+			printf("F");
+		} else {
+			printf("%i", resto[i]);
+		}
+	}
 }
