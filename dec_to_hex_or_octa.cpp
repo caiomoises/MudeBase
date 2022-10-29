@@ -17,12 +17,12 @@ int main() {
 			hex(d);
 			printf("(hex).");
 			break;
-        case 2:
-            printf("Digite um valor inteiro e em decimal: ");
+        	case 2:
+            		printf("Digite um valor inteiro e em decimal: ");
 			scanf("%i", &d);
 			printf("%i(dec) = ", d);
             		octal(d);
-           		 printf("(octal).");
+           		printf("(octal).");
 			break;
 		default:
 			break;
@@ -31,7 +31,7 @@ int main() {
 }
 
 void hex(int h){
-	int q, r = 0, resto[r];
+	int r = 0, resto[r];
 	while(h >= 1){
 		resto[r] = h % 16;
 		h = h / 16;
