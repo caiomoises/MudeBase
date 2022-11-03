@@ -80,20 +80,20 @@ void octal(int e){
 		resto[l] = e % 8;
 		e = e / 8;
 		l++;
-    }
+    	}
     for(int i = l - 1; i >= 0; i--){
-        printf("%i", resto[i]);
-    }
+       	printf("%i", resto[i]);
+   }
 }
 
 void bin(int b){
-	int s = 0, resto[max];
+   int s = 0, resto[max];
 	while(b >= 1){
 		resto[s] = b % 2;
-			b = b / 2;
+		b = b / 2;
 		s++;
 	}
-	for(int i = s - 1; i >= 0; i--){
-		printf("%i", resto[i]);
-	}
+   for(int i = s - 1; i >= 0; i--){
+	printf("%i", resto[i]);
+   }
 }
